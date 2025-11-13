@@ -1,0 +1,16 @@
+# 빌드 출력
+docs/
+
+# mdBook 캐시
+book/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
