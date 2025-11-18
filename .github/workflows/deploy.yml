@@ -25,8 +25,16 @@ jobs:
         with:
           mdbook-version: '0.4.40'
       
-      - name: Build book
-        run: mdbook build
+      - name: Build beginner book (일반인편)
+        run: mdbook build -d docs
+      
+      - name: Build expert book (전문가편)
+        run: mdbook build -d docs-expert --config book-expert.toml
+      
+      - name: Merge books into single directory
+        run: |
+          mkdir -p docs/expert
+          cp -r docs-expert/* docs/expert/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
