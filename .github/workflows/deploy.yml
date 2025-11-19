@@ -29,7 +29,12 @@ jobs:
         run: mdbook build
       
       - name: Build expert book (전문가편)
-        run: mdbook build --config-file book-expert.toml
+        run: |
+          mv book.toml book-beginner.toml
+          mv book-expert.toml book.toml
+          mdbook build
+          mv book.toml book-expert.toml
+          mv book-beginner.toml book.toml
       
       - name: Merge books into single directory
         run: |
