@@ -202,6 +202,13 @@
 
 ---
 
+## 온라인으로 읽기
+
+- 📖 [일반인편: 생각을 코드로](https://dimohy.github.io/CodeWithoutCode)
+- 📖 [전문가편: 사고의 깊이](https://dimohy.github.io/CodeWithoutCode/expert/)
+
+---
+
 **저자**: dimohy  
 **출판**: 2025  
 **최종 업데이트**: 2025년 11월 20일
