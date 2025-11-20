@@ -53,6 +53,25 @@ dimohy - 바이브 코딩 전도사
 
 ---
 
+## 라이선스
+
+이 책은 **CC BY-NC-ND 4.0** (Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International) 라이선스로 배포됩니다.
+
+### 허용 사항:
+- ✅ 읽기 및 공유 (다운로드, 링크 공유)
+- ✅ 출처 표시 조건으로 재배포
+
+### 제한 사항:
+- ❌ 상업적 사용 금지
+- ❌ 변형 및 2차 저작물 제작 금지
+- ❌ 내용 복사하여 다른 저작물에 사용 불가
+
+자세한 내용은 [CC BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko)를 참조하세요.
+
+---
+
+**저자**: dimohy  
+**출판**: 2025  
 **GitHub Repository**: [https://github.com/dimohy/CodeWithoutCode](https://github.com/dimohy/CodeWithoutCode)
 
 이제 바이브 코딩의 세계로 함께 들어가 봅시다!
