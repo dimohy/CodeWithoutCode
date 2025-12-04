@@ -240,15 +240,16 @@ Chat 창이 왼쪽 또는 오른쪽 사이드바에 나타납니다.
 Chat 창이 열리면, **채팅 입력창 하단**을 주목하세요.
 
 1. 입력창 바로 아래 또는 옆에 **모드 선택 드롭다운**이 있습니다
-2. 드롭다운을 클릭하면 세 가지 모드가 표시됩니다:
+2. 드롭다운을 클릭하면 네 가지 모드가 표시됩니다:
    - **Ask** (질문 모드): 답변만 받기
    - **Edit** (편집 모드): 특정 파일 수정
    - **Agent** (에이전트 모드): 자율적으로 여러 파일 작업
+   - **Plan** (계획 모드): 구현 전 상세 계획 수립 (프리뷰)
 
 3. **Agent**를 선택하세요
 
-// 이미지로 교체되어야 함 : Chat 입력창 하단의 모드 드롭다운 메뉴에서 Ask, Edit, Agent 중 Agent를 선택하는 화면
-프롬프트: Detailed illustration of Copilot Chat input box bottom area, showing mode dropdown menu with three options: Ask, Edit, and Agent. Agent option is highlighted or selected. Modern UI design with clear labeling
+// 이미지로 교체되어야 함 : Chat 입력창 하단의 모드 드롭다운 메뉴에서 Ask, Edit, Agent, Plan 중 Agent를 선택하는 화면
+프롬프트: Detailed illustration of Copilot Chat input box bottom area, showing mode dropdown menu with four options: Ask, Edit, Agent, and Plan. Agent option is highlighted or selected. Modern UI design with clear labeling
 
 **Agent 모드와 다른 모드의 차이**
 
@@ -259,6 +260,7 @@ Chat 창이 열리면, **채팅 입력창 하단**을 주목하세요.
 | **Ask** | 코드 설명, 질문 | 답변만 제공 (파일 수정 안 함) |
 | **Edit** | 열린 파일 빠른 수정 | 현재 파일만 수정 |
 | **Agent** | 복잡한 작업, 여러 파일 | 자율적으로 계획하고 실행 |
+| **Plan** | 큰 프로젝트 설계 | 구현 전 상세 계획 수립 (프리뷰) |
 
 **Agent 모드가 선택되었는지 확인하기**
 
@@ -266,8 +268,8 @@ Chat 창이 열리면, **채팅 입력창 하단**을 주목하세요.
 2. 또는 드롭다운이 "Agent"로 설정되어 있음
 3. 이제 Agent와 대화할 준비가 완료되었습니다!
 
-// 이미지로 교체되어야 함 : Ask, Edit, Agent 세 가지 모드의 차이를 비교하는 다이어그램. 각 모드의 특징과 사용 사례를 시각적으로 표현
-프롬프트: Comparison infographic showing three Copilot modes side by side: Ask mode (question mark icon, answers only), Edit mode (pencil icon, single file changes), Agent mode (robot icon, autonomous multi-file work). Clean icons and brief descriptions for each
+// 이미지로 교체되어야 함 : Ask, Edit, Agent, Plan 네 가지 모드의 차이를 비교하는 다이어그램. 각 모드의 특징과 사용 사례를 시각적으로 표현
+프롬프트: Comparison infographic showing four Copilot modes: Ask mode (question mark icon, answers only), Edit mode (pencil icon, single file changes), Agent mode (robot icon, autonomous multi-file work), Plan mode (clipboard icon, implementation planning). Clean icons and brief descriptions for each
 
 #### 첫 대화 실전 예시: 처음부터 끝까지
 
@@ -351,12 +353,12 @@ Agent가 다시 작업을 시작합니다:
 
 Agent 모드가 다른 모드와 다른 점:
 
-| 특징 | Ask 모드 | Edit 모드 | Agent 모드 |
-|------|----------|-----------|------------|
-| 파일 수정 | ❌ 없음 | ✅ 선택된 파일만 | ✅ 여러 파일 자동 |
-| 작업 방식 | 답변만 제공 | 직접 지정 필요 | 자율적 판단 |
-| 터미널 명령 | ❌ 없음 | ❌ 없음 | ✅ 제안 및 실행 |
-| 반복 개선 | ❌ 어려움 | ⚠️ 제한적 | ✅ 원활함 |
+| 특징 | Ask 모드 | Edit 모드 | Agent 모드 | Plan 모드 |
+|------|----------|-----------|------------|------------|
+| 파일 수정 | ❌ 없음 | ✅ 선택된 파일만 | ✅ 여러 파일 자동 | ❌ 계획만 수립 |
+| 작업 방식 | 답변만 제공 | 직접 지정 필요 | 자율적 판단 | 단계별 계획 제시 |
+| 터미널 명령 | ❌ 없음 | ❌ 없음 | ✅ 제안 및 실행 | ❌ 없음 |
+| 반복 개선 | ❌ 어려움 | ⚠️ 제한적 | ✅ 원활함 | ✅ 계획 수정 가능 |
 
 Agent 모드를 선택하면 AI가 **더 적극적으로** 작업합니다. 여러분은 "무엇을" 원하는지만 말하면, Agent가 "어떻게" 할지 결정합니다.
 
@@ -433,6 +435,33 @@ Agent는:
 → Agent가 전체 프로젝트 파악
 → 관련된 모든 파일 수정 제안
 → 일관된 구조로 자동 통합
+
+#### # 멘션으로 컨텍스트 추가하기
+
+`@workspace` 외에도 `#` 기호를 사용하여 Agent에게 더 구체적인 컨텍스트를 제공할 수 있습니다. Chat 입력창에서 `#`을 입력하면 사용 가능한 옵션들이 표시됩니다.
+
+**자주 사용하는 # 멘션:**
+
+| 멘션 | 설명 | 예시 |
+|------|------|------|
+| `#file` | 특정 파일 참조 | `#file:index.html 이 파일에 버튼 추가해줘` |
+| `#codebase` | 전체 코드베이스 검색 | `#codebase 사용자 인증 관련 코드가 어디 있어?` |
+| `#terminalSelection` | 터미널 출력 참조 | `#terminalSelection 이 에러 어떻게 해결해?` |
+| `#fetch` | 웹 콘텐츠 가져오기 | `#fetch https://api.example.com 이 API 사용법 알려줘` |
+
+**실전 예시:**
+
+```
+#file:script.js
+이 파일에서 할 일 추가 기능이 어떻게 작동하는지 설명해줘
+```
+
+```
+#terminalSelection
+방금 실행했는데 이런 에러가 났어요. 어떻게 고쳐야 할까요?
+```
+
+`#` 멘션은 Agent에게 정확한 맥락을 제공하여 더 정확한 답변을 얻는 데 도움이 됩니다. 특히 `#file`은 특정 파일에 대해 질문하거나 수정을 요청할 때 매우 유용합니다.
 
 #### 실전 팁: Agent와 효과적으로 대화하기
 
