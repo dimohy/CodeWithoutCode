@@ -4,6 +4,9 @@ docs/
 # mdBook 캐시
 book/
 
+# 기획서
+기획서/
+
 # OS
 .DS_Store
 Thumbs.db
